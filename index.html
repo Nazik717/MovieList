@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Любовный список фильмов Назара и Кристины</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Любовный список фильмов Назара и Кристины</h1>
+</body>
+<body class="bg-gray-900">
+
+  <section class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 p-8">
+    
+    <!-- Фильм 1: Частые побочные явления -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="CHPYA.png" alt="Частые побочные явления" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Частые побочные явления</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма</p>
+        <p class="text-yellow-300">⭐ 7.0/10</p>
+        <p class="mt-2 text-green-500 status" onclick="toggleStatus(this)">✅ Статус: Просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 2: Царство падальщиков -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="cpad.png" alt="Царство падальщиков" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Царство падальщиков</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма, Триллер</p>
+        <p class="text-yellow-300">⭐ 7.8/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 3: Свидание с монстром -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="свидание.png" alt="Свидание с монстром" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Свидание с монстром</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Ужасы, Комедия</p>
+        <p class="text-yellow-300">⭐ 6.5/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 4: Что-то не так с Кевином -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="Эзра.png" alt="Что-то не так с Кевином" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Что-то не так с Кевином</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма, Психологический</p>
+        <p class="text-yellow-300">⭐ 7.4/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 5: Поток -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="Kit.png" alt="Поток" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Поток</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Триллер, Научная фантастика</p>
+        <p class="text-yellow-300">⭐ 8.0/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 6: Микки 17 -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="Mikki.png" alt="Микки 17" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Микки 17</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Научная фантастика</p>
+        <p class="text-yellow-300">⭐ 7.5/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 7: Одни из нас (2 сезон) -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="TLOU2.png" alt="Одни из нас (2 сезон)" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Одни из нас (2 сезон)</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма, Боевик</p>
+        <p class="text-yellow-300">⭐ 8.1/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 8: Гангстерленд -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="tomi.png" alt="Гангстерленд" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Гангстерленд</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Криминал, Триллер</p>
+        <p class="text-yellow-300">⭐ 6.9/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 9: Умереть во имя -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="tdf.png" alt="Умереть во имя" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Умереть во имя</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма, История</p>
+        <p class="text-yellow-300">⭐ 7.2/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 10: Белый лотос -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="lotos.png" alt="Белый лотос" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Белый лотос</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма, Комедия</p>
+        <p class="text-yellow-300">⭐ 8.3/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 11: Одна жизнь -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="zhiza.png" alt="Одна жизнь" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Одна жизнь</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма</p>
+        <p class="text-yellow-300">⭐ 7.4/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 12: Один день -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="odinden.png" alt="Один день" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Один день</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Романтика, Драма</p>
+        <p class="text-yellow-300">⭐ 7.3/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 13: Пантеон -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="Pantefon.png" alt="Пантеон" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Пантеон</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Научная фантастика</p>
+        <p class="text-yellow-300">⭐ 7.5/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+
+    <!-- Фильм 14: Перелом с Энтони Хопкинсом -->
+    <div class="movie-card bg-gray-800 rounded-2xl overflow-hidden shadow-xl">
+      <img src="Perelom.png" alt="Перелом с Энтони Хопкинсом" class="w-full h-64 object-cover">
+      <div class="p-4">
+        <h2 class="text-xl font-bold text-white mb-1">Перелом с Энтони Хопкинсом</h2>
+        <p class="text-sm text-gray-400 mb-2">Жанр: Драма, Триллер</p>
+        <p class="text-yellow-300">⭐ 7.6/10</p>
+        <p class="mt-2 text-red-500 status" onclick="toggleStatus(this)">❌ Статус: Не просмотрено</p>
+        <a href="#" class="mt-3 inline-block text-sm text-indigo-400 underline">Смотреть трейлер</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleStatus(element) {
+      if (element.textContent.includes("Не просмотрено")) {
+        element.textContent = "✅ Статус: Просмотрено";
+        element.classList.remove("text-red-500");
+        element.classList.add("text-green-500");
+      } else {
+        element.textContent = "❌ Статус: Не просмотрено";
+        element.classList.remove("text-green-500");
+        element.classList.add("text-red-500");
+      }
+    }
+  </script>
+
+</body>
+</html>
